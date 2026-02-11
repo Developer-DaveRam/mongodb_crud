@@ -1,0 +1,148 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "My API",
+    "description": "Description",
+    "version": "1.0.0"
+  },
+  "host": "localhost:5001",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/User/createUser": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "sss"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "sss"
+                },
+                "mobileNo": {
+                  "type": "number",
+                  "example": 1111
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/Payments/createPayment": {
+      "post": {
+        "tags": [
+          "Payment"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "loanDate": {
+                  "type": "number",
+                  "example": 121
+                },
+                "loanId": {
+                  "type": "number",
+                  "example": 333
+                },
+                "loanAmount": {
+                  "type": "number",
+                  "example": 333
+                },
+                "roi": {
+                  "type": "number",
+                  "example": 333
+                },
+                "loanStatus": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "requestStatus": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "userData": {
+                  "type": "object",
+                  "properties": {
+                    "userName": {
+                      "type": "string",
+                      "example": "string"
+                    },
+                    "userId": {
+                      "type": "string",
+                      "example": "ObjectId"
+                    },
+                    "email": {
+                      "type": "string",
+                      "example": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/Payments/getPaymenton": {
+      "post": {
+        "tags": [
+          "Payment"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "userId": {
+                  "type": "string",
+                  "example": "sksk"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    }
+  }
+}

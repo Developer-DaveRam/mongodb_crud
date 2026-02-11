@@ -1,0 +1,35 @@
+{
+  "name": "crud",
+  "description": "",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "tsx src/app.ts",
+    "swagger":"tsx src/config/swagger.ts",
+    "dev": "tsx watch src/app.ts",
+    "build": "esbuild src/app.ts --bundle --format=esm --platform=node --outdir=dist",
+    "serve": "node dist/app.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.6",
+    "swagger": "^0.7.5",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.2",
+    "@types/swagger-ui-express": "^4.1.8"
+  }
+}
