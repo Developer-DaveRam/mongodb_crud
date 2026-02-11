@@ -7,6 +7,7 @@ RUN npm ci
 
 COPY . .
 
-EXPOSE 3000
+ENV PORT=5001
+EXPOSE 5001
 
 CMD ["npm", "run", "start"]
