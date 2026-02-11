@@ -5,11 +5,10 @@ services:
       dockerfile: Dockerfile
     container_name: mongodb-crud-app
     ports:
-      - "${PORT:-3000}:${PORT:-3000}"
+      - "3000:3000"
     environment:
-      PORT: ${PORT:-3000}
-      # Inside Docker, use service-name `mongo` (not localhost)
-      url: mongodb://mongo:27017/crud
+      PORT: 3000
+      url: mongodb://mongo:27017/cruddb
     depends_on:
       mongo:
         condition: service_healthy

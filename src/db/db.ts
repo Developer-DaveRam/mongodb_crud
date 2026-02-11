@@ -3,15 +3,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const sanitizeEnvValue = (value?: string) => {
-  if (!value) return "";
-  return value.trim().replace(/^['"]|['"]$/g, "");
-};
-
 export const connectDB = async () => {
-  const mongoUrl =
-    sanitizeEnvValue(process.env.url) ||
-    sanitizeEnvValue(process.env.MONGODB_URL);
+  const mongoUrl = process.env.url ?? process.env.MONGODB_URL;
 
   if (!mongoUrl) {
     throw new Error("MongoDB URL is missing. Set 'url' or 'MONGODB_URL'.");
